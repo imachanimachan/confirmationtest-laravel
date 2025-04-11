@@ -1,0 +1,170 @@
+
+
+.contact-form__content {
+  margin: 0 auto;
+  padding: 30px 15px;
+  max-width: 1230px;
+}
+
+.contact-form__heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form {
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+}
+
+.form__group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.form__input--radio{
+  padding-right: 130px;
+  width: 600px;
+  display: inline;
+}
+
+.form__label--required {
+  margin-left: 5px;
+  padding: 4px 6px;
+  border-radius: 3px;
+  color: #ff0000;
+}
+
+.form__error {
+  height: 20px;
+  color: #ff0000;
+  text-align: left;
+}
+
+.form__input--text input,
+.form__input--textarea textarea {
+  padding: 10px;
+  width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+
+  appearance: none;
+}
+
+.form__input--text input {
+  height: 40px;
+}
+
+.form__input--textarea textarea {
+  height: 180px;
+}
+
+.form__button {
+  margin-top: 30px;
+}
+
+.form__button-submit {
+  padding: 10px;
+  width: 30%;
+  height: 50px;
+  border: none;
+  border-radius: 3px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+  .phone-input {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: start;
+    }
+
+    .phone-input input {
+      width: 180px; 
+      height: 40px;
+      font-size: 1rem;
+      padding: 5px 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      background-color: #f9f9f9;
+      appearance: none;
+}
+    .phone-input span {
+      font-size: 1.2rem;
+      color: #888;
+    }
+
+    
+.form__input--text select {
+  padding: 10px;
+  width: 350px;
+  height: 44px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  appearance: none;
+  
+}
+
+
+.form__input--textarea textarea {
+  padding: 10px;
+  width: 600px;
+  height: 180px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: #fff;
+}
+
+.form__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.form__button-submit {
+  padding: 12px;
+  width: 200px;
+  height: 50px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form__button-submit:hover {
+  background: #444;
+}
+
+.form__group-content--tel--center{
+  margin-right: 5px;
+}
+
+.form__group-content--center{
+  margin-right: 250px;
+}  
+
+.form__input--name {
+  width: 48%; 
+}
+
+.form__input--name input {
+  width: 100%; 
+}
+.form__group-content--a {
+  display: flex;
+  gap: 10px;  
+  align-items: center; 
+  justify-content: space-between; 
+  margin-right:210px;
+}

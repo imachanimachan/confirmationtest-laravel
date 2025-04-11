@@ -1,0 +1,49 @@
+.header {
+  background: #000;
+}
+
+.header__inner {
+  margin: 0 auto;
+  padding: 20px 15px;
+  max-width: 1230px;
+}
+
+.header-utilities {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header-left,
+.header-nav {
+  width: 200px; /* 必要に応じて調整 */
+}
+
+
+.header__logo {
+  text-align: center;
+  flex-grow: 1;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color:#fff;
+  font-size: 16px;
+  
+}
+.header-nav form {
+  display: flex;
+  justify-content: flex-end;
+}
+.header-nav button {
+  font-size: 16px;
+  padding: 8px 16px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -3,11 +3,13 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Contact;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
+    
     /**
      * Seed the application's database.
      */
@@ -19,5 +21,10 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        $this->call(CategorySeeder::class);
+
+        \App\Models\Contact::factory()->count(35)->create();
+        
     }
 }
