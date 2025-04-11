@@ -23,7 +23,9 @@
         <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}">
         <input type="hidden" name="gender" value="{{ $contact['gender'] }}">
         <input type="hidden" name="email" value="{{ $contact['email'] }}">
-        <input type="hidden" name="tel" value="{{ $contact['tel'] }}">
+        <input type="hidden" name="tel1" value="{{ $contact['tel1'] }}">
+        <input type="hidden" name="tel2" value="{{ $contact['tel2'] }}">
+        <input type="hidden" name="tel3" value="{{ $contact['tel3'] }}">
         <input type="hidden" name="address" value="{{ $contact['address'] }}">
         <input type="hidden" name="building" value="{{ $contact['building'] }}">
         <input type="hidden" name="detail" value="{{ $contact['detail'] }}">
@@ -55,12 +57,16 @@
                 </tr>
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">電話番号</th>
-                    <td class="confirm-table__text">
-                        <p>{{$contact['tel']}}</p>
+                    <td class="confirm-table__text-tel">
+                        <div class="confirm-table__text-tel--1">
+                            <div>{{$contact['tel1']}}</div>
+                            <div>{{$contact['tel2']}}</div>
+                            <div>{{$contact['tel3']}}</div>
+                        </div>
                     </td>
                 </tr>
 
-                <tr class="confirm-table__row">
+                <tr class=" confirm-table__row">
                     <th class="confirm-table__header">住所</th>
                     <td class="confirm-table__text">
                         <p>{{$contact['address']}}</p>

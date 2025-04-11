@@ -29,10 +29,8 @@ class ContactController extends Controller
     public function confirm(ContactRequest $request)
     {
 
-        $tel = $request->input('tel1') . $request->input('tel2') . $request->input('tel3');
-
-        $contact = $request->only(['last_name', 'first_name','gender', 'email', 'tel', 'address' , 'building', 'detail', 'category_id']);
-        $contact['tel'] = $tel;
+        $contact = $request->only(['last_name', 'first_name','gender', 'email', 'tel1', 'tel2', 'tel3' ,'address' , 'building', 'detail', 'category_id']);
+        
 
         $genderMap = [
             '1' => '男性',
@@ -48,21 +46,21 @@ class ContactController extends Controller
         return view('confirm', compact('contact', 'category'));
     }
           
-    public function create(ContactRequest $request)
+    public function create(Request $request)
     {
-        $tel = $request->input('tel1') . $request->input('tel2') . $request->input('tel3');
-        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail', 'category_id']);
-        $contact['tel'] = $tel;
 
-        dd($contact);
-        
+        $tel = $request->input('tel1') . $request->input('tel2') . $request->input('tel3');
+        $contact['tel'] = $tel;
+        $contact = $request->only(['last_name', 'first_name', 'gender', 'email','tel','address', 'building', 'detail', 'category_id']);
+    
+
         $genderMap = [
             '男性' => '1',
             '女性' => '2',
             'その他' => '3'
         ];
         $contact['gender'] = $genderMap[$contact['gender']];
-        Contact::create($contact);
+        Contact::create($contact, $tel);
         return view('thanks');
     }
 }
