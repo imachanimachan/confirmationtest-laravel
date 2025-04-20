@@ -49,10 +49,10 @@ class ContactController extends Controller
     public function create(Request $request)
     {
 
+        $contact = $request->only(['last_name', 'first_name', 'gender', 'email','address', 'building', 'detail', 'category_id']);
         $tel = $request->input('tel1') . $request->input('tel2') . $request->input('tel3');
         $contact['tel'] = $tel;
-        $contact = $request->only(['last_name', 'first_name', 'gender', 'email','tel','address', 'building', 'detail', 'category_id']);
-    
+
 
         $genderMap = [
             '男性' => '1',
